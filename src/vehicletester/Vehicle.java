@@ -10,6 +10,9 @@ public class Vehicle {
     public double fuelTankSize;
     public double fuelAvailable;
     public double kilometresTravelled;
+    public int passengers;
+    public double passengerFare;
+    public double fuelCost;
 
     public Vehicle() {
         //Default Constructor
@@ -17,13 +20,19 @@ public class Vehicle {
         fuelTankSize = 0;
         fuelAvailable = 0;
         kilometresTravelled = 0;
+        passengers = 0;
+        passengerFare = 25.00;
+        fuelCost = 1.05;
     }
 
-    public Vehicle(double gK, double fTS, double fA, double kT){
+    public Vehicle(double gK, double fTS, double fA, double kT, int pP, double pF, double fC){
         gasKilometrage = gK;
         fuelTankSize = fTS;
         fuelAvailable = fA;
         kilometresTravelled = kT;
+        passengers = pP;
+        passengerFare = pF;
+        fuelCost = fC;
     }
 
     public void addFuel(double gas){
@@ -63,6 +72,12 @@ public class Vehicle {
         output += "Fuel Tank Size = " + fuelTankSize + "\n";
         output += "Fuel Available = " + fuelAvailable + "\n";
         output += "Kilometres Driven = " + kilometresTravelled + "\n";
+        output += "Passengers Present = " + passengers + "\n";
+        output += "Passenger Fare = " + passengerFare + "\n";
+        output += "Fuel Cost per Litre = $" + fuelCost + "/L\n";
+        output += "-------------------------------------\n";
+        output += "Revenue Generated = " + passengerFare * passengers + "\n";
+        //output += "Cost of the Journey = " + fuelCost *  + "\n";
         return output;
     }
 }
