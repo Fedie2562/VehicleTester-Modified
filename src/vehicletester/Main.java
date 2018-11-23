@@ -4,7 +4,9 @@ import javax.swing.*;
 
 public class Main {
     public static void main(String[] args) {
-        Vehicle car1 = new Vehicle(7.5, 60.0, 60.0, 0.0, 1, 30.00, 1.06);
+        double gasPrice = Double.parseDouble(JOptionPane.showInputDialog("What is the price for gas in $/L"));
+        int passengers = Integer.parseInt(JOptionPane.showInputDialog("How many passengers are being transported ? "));
+        Vehicle car1 = new Vehicle(7.5, 60.0, 60.0, 0.0, passengers, 30.00, gasPrice);
         //Show Vehicle Info
         System.out.println(car1);
 

@@ -73,11 +73,12 @@ public class Vehicle {
         output += "Fuel Available = " + fuelAvailable + "\n";
         output += "Kilometres Driven = " + kilometresTravelled + "\n";
         output += "Passengers Present = " + passengers + "\n";
-        output += "Passenger Fare = " + passengerFare + "\n";
+        output += "Passenger Fare = $" + passengerFare + "\n";
         output += "Fuel Cost per Litre = $" + fuelCost + "/L\n";
         output += "-------------------------------------\n";
-        output += "Revenue Generated = " + passengerFare * passengers + "\n";
-        //output += "Cost of the Journey = " + fuelCost *  + "\n";
+        output += "Revenue Generated = $" + passengerFare * passengers + "\n";
+        output += "Cost of the Journey = $" + fuelCost * kilometresTravelled * gasKilometrage + "\n";
+        output += "Profit gained = $" + ((passengerFare * passengers) - (fuelCost * kilometresTravelled * gasKilometrage)) + "\n";
         return output;
     }
 }
